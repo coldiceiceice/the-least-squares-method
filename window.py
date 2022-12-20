@@ -276,7 +276,7 @@ class Ui_MainWindow(object):
 ############### КНОПКИ ########################
     def btn(self):
         self.but_line.clicked.connect(lambda: matLine.MathForm.line(self))
-        #self.but_line.clicked.connect(lambda: self.line())
+        self.but_kvadrat.clicked.connect(lambda: matLine.MathForm.square(self))
         #self.but_line.clicked.connect(lambda: self.line())
         #self.but_line.clicked.connect(lambda: self.line())
         #self.but_line.clicked.connect(lambda: self.line())
