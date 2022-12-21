@@ -1,6 +1,4 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
-import numpy as np
-import matplotlib.pyplot as plt
 import matLine
 
 
@@ -8,8 +6,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(685, 557)
-        MainWindow.setMinimumSize(QtCore.QSize(685, 557))
-        MainWindow.setMaximumSize(QtCore.QSize(685, 557))
+        MainWindow.setMinimumSize(QtCore.QSize(685, 608))
+        MainWindow.setMaximumSize(QtCore.QSize(685, 608))
         MainWindow.setStyleSheet("QPushButtons {\n"
                                  "    \n"
                                  "    background-color: rgb(255, 170, 127);\n"
@@ -18,7 +16,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label_poryadok = QtWidgets.QLabel(self.centralwidget)
-        self.label_poryadok.setGeometry(QtCore.QRect(20, 20, 311, 51))
+        self.label_poryadok.setGeometry(QtCore.QRect(20, 20, 645, 102))
         font = QtGui.QFont()
         font.setFamily("Yu Gothic UI")
         font.setPointSize(20)
@@ -33,7 +31,7 @@ class Ui_MainWindow(object):
                                           "border-radius: 25px")
         self.label_poryadok.setObjectName("label_poryadok")
         self.but_kvadrat = QtWidgets.QPushButton(self.centralwidget)
-        self.but_kvadrat.setGeometry(QtCore.QRect(10, 340, 331, 41))
+        self.but_kvadrat.setGeometry(QtCore.QRect(10, 391, 331, 41))
         self.but_kvadrat.setStyleSheet("QPushButton {\n"
                                        "    border: 3px solid rgb(0, 170, 255);\n"
                                        "    border-radius: 20px;\n"
@@ -51,7 +49,7 @@ class Ui_MainWindow(object):
                                        "}")
         self.but_kvadrat.setObjectName("but_kvadrat")
         self.but_line = QtWidgets.QPushButton(self.centralwidget)
-        self.but_line.setGeometry(QtCore.QRect(10, 280, 331, 41))
+        self.but_line.setGeometry(QtCore.QRect(10, 331, 331, 41))
         self.but_line.setStyleSheet("QPushButton {\n"
                                     "    border: 3px solid rgb(0, 170, 255);\n"
                                     "    border-radius: 20px;\n"
@@ -70,7 +68,7 @@ class Ui_MainWindow(object):
                                     "")
         self.but_line.setObjectName("but_line")
         self.but_kub = QtWidgets.QPushButton(self.centralwidget)
-        self.but_kub.setGeometry(QtCore.QRect(10, 400, 331, 41))
+        self.but_kub.setGeometry(QtCore.QRect(10, 451, 331, 41))
         self.but_kub.setStyleSheet("QPushButton {\n"
                                    "    border: 3px solid rgb(0, 170, 255);\n"
                                    "    border-radius: 20px;\n"
@@ -88,19 +86,19 @@ class Ui_MainWindow(object):
                                    "}")
         self.but_kub.setObjectName("but_kub")
         self.background = QtWidgets.QLabel(self.centralwidget)
-        self.background.setGeometry(QtCore.QRect(0, -20, 691, 531))
+        self.background.setGeometry(QtCore.QRect(0, -20, 691, 582))
         self.background.setStyleSheet("background-color: rgb(155, 253, 255);")
         self.background.setText("")
         self.background.setObjectName("background")
         self.enterLine = QtWidgets.QLabel(self.centralwidget)
-        self.enterLine.setGeometry(QtCore.QRect(10, 90, 331, 21))
+        self.enterLine.setGeometry(QtCore.QRect(10, 141, 331, 21))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.enterLine.setFont(font)
         self.enterLine.setStyleSheet("")
         self.enterLine.setObjectName("enterLine")
         self.lineEdit_X = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_X.setGeometry(QtCore.QRect(10, 120, 331, 51))
+        self.lineEdit_X.setGeometry(QtCore.QRect(10, 171, 331, 51))
         self.lineEdit_X.setStyleSheet("QLineEdit{ \n"
                                       "    color: rgb(255, 255, 255);\n"
                                       "    background: rgb(0, 255, 255);\n"
@@ -114,7 +112,7 @@ class Ui_MainWindow(object):
         self.lineEdit_X.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lineEdit_X.setObjectName("lineEdit_X")
         self.lineEdit_Y = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_Y.setGeometry(QtCore.QRect(10, 180, 331, 51))
+        self.lineEdit_Y.setGeometry(QtCore.QRect(10, 231, 331, 51))
         self.lineEdit_Y.setStyleSheet("QLineEdit{ \n"
                                       "    color: rgb(255, 255, 255);\n"
                                       "    background: rgb(0, 255, 255);\n"
@@ -128,7 +126,7 @@ class Ui_MainWindow(object):
         self.lineEdit_Y.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lineEdit_Y.setObjectName("lineEdit_Y")
         self.but_stepen = QtWidgets.QPushButton(self.centralwidget)
-        self.but_stepen.setGeometry(QtCore.QRect(350, 280, 331, 41))
+        self.but_stepen.setGeometry(QtCore.QRect(350, 331, 331, 41))
         self.but_stepen.setStyleSheet("QPushButton {\n"
                                       "    border: 3px solid rgb(0, 170, 255);\n"
                                       "    border-radius: 20px;\n"
@@ -147,7 +145,7 @@ class Ui_MainWindow(object):
                                       "")
         self.but_stepen.setObjectName("but_stepen")
         self.but_logarifm = QtWidgets.QPushButton(self.centralwidget)
-        self.but_logarifm.setGeometry(QtCore.QRect(350, 340, 331, 41))
+        self.but_logarifm.setGeometry(QtCore.QRect(350, 391, 331, 41))
         self.but_logarifm.setStyleSheet("QPushButton {\n"
                                         "    border: 3px solid rgb(0, 170, 255);\n"
                                         "    border-radius: 20px;\n"
@@ -166,7 +164,7 @@ class Ui_MainWindow(object):
                                         "")
         self.but_logarifm.setObjectName("but_logarifm")
         self.but_exp = QtWidgets.QPushButton(self.centralwidget)
-        self.but_exp.setGeometry(QtCore.QRect(350, 400, 331, 41))
+        self.but_exp.setGeometry(QtCore.QRect(350, 451, 331, 41))
         self.but_exp.setStyleSheet("QPushButton {\n"
                                    "    border: 3px solid rgb(0, 170, 255);\n"
                                    "    border-radius: 20px;\n"
@@ -185,7 +183,7 @@ class Ui_MainWindow(object):
                                    "")
         self.but_exp.setObjectName("but_exp")
         self.but_giperbol = QtWidgets.QPushButton(self.centralwidget)
-        self.but_giperbol.setGeometry(QtCore.QRect(180, 460, 331, 41))
+        self.but_giperbol.setGeometry(QtCore.QRect(180, 511, 331, 41))
         self.but_giperbol.setStyleSheet("QPushButton {\n"
                                         "    border: 3px solid rgb(0, 170, 255);\n"
                                         "    border-radius: 20px;\n"
@@ -204,7 +202,7 @@ class Ui_MainWindow(object):
                                         "")
         self.but_giperbol.setObjectName("but_giperbol")
         self.lineEdit_XX = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_XX.setGeometry(QtCore.QRect(340, 150, 331, 51))
+        self.lineEdit_XX.setGeometry(QtCore.QRect(340, 201, 331, 51))
         self.lineEdit_XX.setStyleSheet("QLineEdit{ \n"
                                        "    color: rgb(255, 255, 255);\n"
                                        "    background: rgb(0, 255, 255);\n"
@@ -218,7 +216,7 @@ class Ui_MainWindow(object):
         self.lineEdit_XX.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lineEdit_XX.setObjectName("lineEdit_XX")
         self.enterLine_2 = QtWidgets.QLabel(self.centralwidget)
-        self.enterLine_2.setGeometry(QtCore.QRect(350, 80, 331, 61))
+        self.enterLine_2.setGeometry(QtCore.QRect(350, 131, 331, 61))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.enterLine_2.setFont(font)
@@ -258,13 +256,13 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Курсовая"))
-        self.label_poryadok.setText(_translate("MainWindow", "ПОРЯДОК:  "))
+        self.label_poryadok.setText(_translate("MainWindow", "ИСКОМОЕ УРАВНЕНИЕ РЕГРЕССИИ ИМЕЕТ ВИД:  "))
         self.but_kvadrat.setText(_translate("MainWindow", "КВАДРАТИЧНАЯ"))
         self.but_line.setText(_translate("MainWindow", "ЛИНЕЙНАЯ"))
         self.but_kub.setText(_translate("MainWindow", "КУБИЧЕСКАЯ"))
         self.enterLine.setText(_translate("MainWindow", "Введите начальные значения X, Y:"))
-        self.lineEdit_X.setText(_translate("MainWindow", "X"))
-        self.lineEdit_Y.setText(_translate("MainWindow", "Y"))
+        self.lineEdit_X.setText(_translate("MainWindow", "0.9, 1, 1.11, 1.2, 1.24, 1.34, 1.4, 1.43, 1.5, 1.55"))
+        self.lineEdit_Y.setText(_translate("MainWindow", "4.08, 3.7875, 3.4594, 3.34125, 3.465, 3.104, 3.193, 3.1007, 3.06, 2.891"))
         self.but_stepen.setText(_translate("MainWindow", "СТЕПЕННОЙ"))
         self.but_logarifm.setText(_translate("MainWindow", "ЛОГАРИФМИЧЕСКИЙ"))
         self.but_exp.setText(_translate("MainWindow", "ЭКСПОНЦЕАЛЬНЫЙ"))
@@ -275,13 +273,13 @@ class Ui_MainWindow(object):
 
 ############### КНОПКИ ########################
     def btn(self):
-        self.but_line.clicked.connect(lambda: matLine.MathForm.line(self))
-        self.but_kvadrat.clicked.connect(lambda: matLine.MathForm.square(self))
-        self.but_kub.clicked.connect(lambda: matLine.MathForm.cube(self))
-        self.but_exp.clicked.connect(lambda: matLine.MathForm.expon(self))
-        self.but_logarifm.clicked.connect(lambda: matLine.MathForm.logr(self))
-        self.but_stepen.clicked.connect(lambda: matLine.MathForm.degree(self, 1))
-        #self.but_line.clicked.connect(lambda: self.line())
+        self.but_line.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.line(self)))
+        self.but_kvadrat.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.square(self)))
+        self.but_kub.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.cube(self)))
+        self.but_exp.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.expon(self)))
+        self.but_logarifm.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.logr(self)))
+        self.but_stepen.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.degree(self))) # не работает
+        self.but_giperbol.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.giper(self))) # не работает
 
 
 
