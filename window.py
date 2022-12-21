@@ -280,7 +280,7 @@ class Ui_MainWindow(object):
         self.but_kub.clicked.connect(lambda: matLine.MathForm.cube(self))
         self.but_exp.clicked.connect(lambda: matLine.MathForm.expon(self))
         self.but_logarifm.clicked.connect(lambda: matLine.MathForm.logr(self))
-        #self.but_line.clicked.connect(lambda: self.line())
+        self.but_stepen.clicked.connect(lambda: matLine.MathForm.degree(self, 1))
         #self.but_line.clicked.connect(lambda: self.line())
 
 
