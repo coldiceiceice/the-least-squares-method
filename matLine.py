@@ -1,42 +1,49 @@
+import statistics
+
 import numpy as np
 import matplotlib.pyplot as plt
+import scipy.stats
+from scipy import stats
 
 
 class MathForm:
     def line(self):
         # y = kx + b
-        N = 10  # число экспериментов
-        sigma = 3  # стандартное отклонение наблюдаемых значений
-        k = 1  # теоретическое значение параметра k
-        b = 10  # теоретическое значение параметра b
 
-        x = np.array(range(N))
-        f = np.array([k * z + b for z in range(N)])
-        y = f + np.random.normal(0, sigma, N)
+        x = [0.9, 1, 11.1, 1.2, 1.24, 1.34, 1.4, 1.43, 1.5, 1.55]
+        y = [4.08, 3.7875, 3.4594, 3.34125, 3.465, 3.104, 3.193, 3.1007, 3.06, 2.891]
+        # polynomial fit with degree = 3
+        model = np.poly1d(np.polyfit(x, y, 1))
 
-        # вычисляем коэффициенты
-        mx = x.sum() / N
-        my = y.sum() / N
-        a2 = np.dot(x.T, x) / N  #умножение X транспонированного на X
-        a11 = np.dot(x.T, y) / N
-
-        kk = (a11 - mx * my) / (a2 - mx ** 2) # вычисление оценок для К и B
-        bb = my - kk * mx
-
-        ff = np.array([kk * z + bb for z in range(N)]) # линейный график аппроксимации
-
-        plt.scatter(x, y, s=2, c='red') # набор точек
-        plt.plot(f)  # теореическая прямая
-        plt.plot(ff, c='red') # эксперементальная прямая
-        plt.grid(True)
+        # add fitted polynomial line to scatterplot
+        polyline = np.linspace(1, 12, 50)
+        plt.scatter(x, y)
+        plt.plot(polyline, model(polyline))
         plt.show()
-
-
+        print(model)
     ###### ax^2 + bx + c
     def square(self):
-        def my_quadratic_function(x):
-            return x ** 2 - 0.6 * x + 1
+        x = [0.9, 1, 11.1, 1.2, 1.24, 1.34, 1.4, 1.43, 1.5, 1.55]
+        y = [4.08, 3.7875, 3.4594, 3.34125, 3.465, 3.104, 3.193, 3.1007, 3.06, 2.891]
+        # polynomial fit with degree = 3
+        model = np.poly1d(np.polyfit(x, y, 2))
 
-        xx = np.linspace(0, 1, 500)
-        plt.plot(xx, my_quadratic_function(xx))
+        # add fitted polynomial line to scatterplot
+        polyline = np.linspace(1, 12, 50)
+        plt.scatter(x, y)
+        plt.plot(polyline, model(polyline))
         plt.show()
+        print(model)
+
+    def cube(self):
+        x = [0.9, 1, 11.1, 1.2, 1.24, 1.34, 1.4, 1.43, 1.5, 1.55]
+        y = [4.08, 3.7875, 3.4594, 3.34125, 3.465, 3.104, 3.193, 3.1007, 3.06, 2.891]
+        # polynomial fit with degree = 3
+        model = np.poly1d(np.polyfit(x, y, 3))
+
+        # add fitted polynomial line to scatterplot
+        polyline = np.linspace(1, 12, 50)
+        plt.scatter(x, y)
+        plt.plot(polyline, model(polyline))
+        plt.show()
+        print(model)

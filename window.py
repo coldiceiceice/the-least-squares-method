@@ -277,7 +277,7 @@ class Ui_MainWindow(object):
     def btn(self):
         self.but_line.clicked.connect(lambda: matLine.MathForm.line(self))
         self.but_kvadrat.clicked.connect(lambda: matLine.MathForm.square(self))
-        #self.but_line.clicked.connect(lambda: self.line())
+        self.but_kub.clicked.connect(lambda: matLine.MathForm.cube(self))
         #self.but_line.clicked.connect(lambda: self.line())
         #self.but_line.clicked.connect(lambda: self.line())
         #self.but_line.clicked.connect(lambda: self.line())
