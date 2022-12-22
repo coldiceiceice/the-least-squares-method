@@ -2,8 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
 class MathForm:
+
+    def takeNum(self):
+        pass
+
     def line(self):
         # y = kx + b линейная
 
@@ -15,9 +18,9 @@ class MathForm:
         # add fitted polynomial line to scatter plot
         polyline = np.linspace(-1, 3, 10)
         plt.scatter(x, y)
-        plt.plot(polyline, model(polyline), color = 'indigo')
+        plt.plot(polyline, model(polyline), color='indigo')
         plt.legend(['Связь X и Y', 'Модель'], loc=2)
-        plt.show(block = True)
+        plt.show(block=True)
         print(model)
         return str(model)
 
@@ -31,7 +34,7 @@ class MathForm:
         # add fitted polynomial line to scatter plot
         polyline = np.linspace(-1, 3, 10)
         plt.scatter(x, y)
-        plt.plot(polyline, model(polyline), color = 'm')
+        plt.plot(polyline, model(polyline), color='m')
         plt.legend(['Связь X и Y', 'Модель'], loc=2)
         plt.show()
         print(model)
@@ -47,15 +50,11 @@ class MathForm:
         # add fitted polynomial line to scatter plot
         polyline = np.linspace(-1, 3, 10)
         plt.scatter(x, y)
-        plt.plot(polyline, model(polyline), color = 'c')
+        plt.plot(polyline, model(polyline), color='c')
         plt.legend(['Связь X и Y', 'Модель'], loc=2)
         plt.show()
         print(model)
         return str(model)
-
-
-
-
 
     # y = e^a + bx экспоненциальная
     def expon(self):
@@ -64,7 +63,7 @@ class MathForm:
         model = np.poly1d(np.polyfit(x, np.log(y), 1))
         polyline = np.linspace(-1, 3, 10)
         plt.scatter(x, y)
-        plt.plot(polyline, np.exp(model(polyline)), color = 'r')
+        plt.plot(polyline, np.exp(model(polyline)), color='r')
         plt.legend(['Связь X и Y', 'Модель'], loc=2)
         plt.show(block=True)
         print(model)
@@ -76,14 +75,13 @@ class MathForm:
         model = np.poly1d(np.polyfit(np.log(x), y, 1))
         polyline = np.linspace(-1, 3, 10)
         plt.scatter(x, y)
-        plt.plot(polyline, model(np.log(polyline)), color = 'g')
+        plt.plot(polyline, model(np.log(polyline)), color='g')
         plt.legend(['Связь X и Y', 'Модель'], loc=2)
         plt.show()
         print(model)
         return str(model)
 
-
-# Гиперболическая - доработать
+    # Гиперболическая - доработать
     # y = a + b/x
     def giper(self):
         from scipy.optimize import curve_fit
@@ -99,13 +97,12 @@ class MathForm:
         plt.plot(x, y, 'o', x, fit_y, '-')
         plt.legend(['Связь X и Y', 'Модель'], loc=2)
 
-
         plt.show()
         return '1.444 + 2.3372 / x'
 
         # y = a * x^b степенная
 
-    def degree(self):  ## доработать
+    def degree(self):  # доработать
         from scipy.optimize import curve_fit
 
         def f(x, a, b):

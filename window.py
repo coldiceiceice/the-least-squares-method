@@ -278,17 +278,6 @@ class Ui_MainWindow(object):
         self.but_kub.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.cube(self)))
         self.but_exp.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.expon(self)))
         self.but_logarifm.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.logr(self)))
-        self.but_stepen.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.degree(self))) # доработать
-        self.but_giperbol.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.giper(self))) # доработать
+        self.but_stepen.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.degree(self)))  # доработать
+        self.but_giperbol.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.giper(self)))  #доработать
 
-
-
-if __name__ == "__main__":
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())
