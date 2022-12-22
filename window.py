@@ -6,8 +6,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(685, 557)
-        MainWindow.setMinimumSize(QtCore.QSize(685, 608))
-        MainWindow.setMaximumSize(QtCore.QSize(685, 608))
+        MainWindow.setMinimumSize(QtCore.QSize(690, 608))
+        MainWindow.setMaximumSize(QtCore.QSize(690, 608))
         MainWindow.setStyleSheet("QPushButtons {\n"
                                  "    \n"
                                  "    background-color: rgb(255, 170, 127);\n"
@@ -98,7 +98,7 @@ class Ui_MainWindow(object):
         self.enterLine.setStyleSheet("")
         self.enterLine.setObjectName("enterLine")
         self.lineEdit_X = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_X.setGeometry(QtCore.QRect(10, 171, 331, 51))
+        self.lineEdit_X.setGeometry(QtCore.QRect(10, 171, 670, 51))
         self.lineEdit_X.setStyleSheet("QLineEdit{ \n"
                                       "    color: rgb(255, 255, 255);\n"
                                       "    background: rgb(0, 255, 255);\n"
@@ -112,7 +112,7 @@ class Ui_MainWindow(object):
         self.lineEdit_X.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lineEdit_X.setObjectName("lineEdit_X")
         self.lineEdit_Y = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_Y.setGeometry(QtCore.QRect(10, 231, 331, 51))
+        self.lineEdit_Y.setGeometry(QtCore.QRect(10, 231, 670, 51))
         self.lineEdit_Y.setStyleSheet("QLineEdit{ \n"
                                       "    color: rgb(255, 255, 255);\n"
                                       "    background: rgb(0, 255, 255);\n"
@@ -201,27 +201,27 @@ class Ui_MainWindow(object):
                                         "}\n"
                                         "")
         self.but_giperbol.setObjectName("but_giperbol")
-        self.lineEdit_XX = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_XX.setGeometry(QtCore.QRect(340, 201, 331, 51))
-        self.lineEdit_XX.setStyleSheet("QLineEdit{ \n"
-                                       "    color: rgb(255, 255, 255);\n"
-                                       "    background: rgb(0, 255, 255);\n"
-                                       "    font: 700 20pt \"Yu Gothic UI\";\n"
-                                       "    border: 3px solid rgb(0, 170, 255);\n"
-                                       "    border-radius: 25px\n"
-                                       "}\n"
-                                       "QLineEdit:focus{\n"
-                                       "border: 3px solid rgb(255, 0, 127);\n"
-                                       "}")
-        self.lineEdit_XX.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.lineEdit_XX.setObjectName("lineEdit_XX")
-        self.enterLine_2 = QtWidgets.QLabel(self.centralwidget)
-        self.enterLine_2.setGeometry(QtCore.QRect(350, 131, 331, 61))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.enterLine_2.setFont(font)
-        self.enterLine_2.setStyleSheet("")
-        self.enterLine_2.setObjectName("enterLine_2")
+        # self.lineEdit_XX = QtWidgets.QLineEdit(self.centralwidget)
+        # self.lineEdit_XX.setGeometry(QtCore.QRect(340, 201, 331, 51))
+        # self.lineEdit_XX.setStyleSheet("QLineEdit{ \n"
+        #                                "    color: rgb(255, 255, 255);\n"
+        #                                "    background: rgb(0, 255, 255);\n"
+        #                                "    font: 700 20pt \"Yu Gothic UI\";\n"
+        #                                "    border: 3px solid rgb(0, 170, 255);\n"
+        #                                "    border-radius: 25px\n"
+        #                                "}\n"
+        #                                "QLineEdit:focus{\n"
+        #                                "border: 3px solid rgb(255, 0, 127);\n"
+        #                                "}")
+        # self.lineEdit_XX.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        # self.lineEdit_XX.setObjectName("lineEdit_XX")
+        # self.enterLine_2 = QtWidgets.QLabel(self.centralwidget)
+        # self.enterLine_2.setGeometry(QtCore.QRect(350, 131, 331, 61))
+        # font = QtGui.QFont()
+        # font.setPointSize(12)
+        # self.enterLine_2.setFont(font)
+        # self.enterLine_2.setStyleSheet("")
+        # self.enterLine_2.setObjectName("enterLine_2")
         self.background.raise_()
         self.label_poryadok.raise_()
         self.but_kvadrat.raise_()
@@ -234,8 +234,8 @@ class Ui_MainWindow(object):
         self.but_logarifm.raise_()
         self.but_exp.raise_()
         self.but_giperbol.raise_()
-        self.lineEdit_XX.raise_()
-        self.enterLine_2.raise_()
+        #self.lineEdit_XX.raise_()
+        #self.enterLine_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 685, 21))
@@ -267,8 +267,8 @@ class Ui_MainWindow(object):
         self.but_logarifm.setText(_translate("MainWindow", "ЛОГАРИФМИЧЕСКИЙ"))
         self.but_exp.setText(_translate("MainWindow", "ЭКСПОНЦЕАЛЬНЫЙ"))
         self.but_giperbol.setText(_translate("MainWindow", "ГИПЕРБОЛИЧЕСКИЙ"))
-        self.lineEdit_XX.setText(_translate("MainWindow", "X"))
-        self.enterLine_2.setText(_translate("MainWindow", "Введите степень для степенного метода:"))
+        # self.lineEdit_XX.setText(_translate("MainWindow", "X"))
+        # self.enterLine_2.setText(_translate("MainWindow", "Введите степень для степенного метода:"))
         self.menu.setTitle(_translate("MainWindow", "Данные установлены по умолчанию"))
 
 ############### КНОПКИ ########################
