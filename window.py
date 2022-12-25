@@ -1,3 +1,4 @@
+import numpy as np
 from PyQt6 import QtCore, QtGui, QtWidgets
 import matLine
 
@@ -252,6 +253,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.btn()
+        self.takeNum()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -281,3 +283,9 @@ class Ui_MainWindow(object):
         self.but_stepen.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.degree(self)))  # доработать
         self.but_giperbol.clicked.connect(lambda: self.label_poryadok.setText(matLine.MathForm.giper(self)))  #доработать
 
+################ СТРОКИ ############################
+
+    def takeNum(self):
+        xText = np.fromstring(self.lineEdit_X.text(), sep = ', ')
+        yText = np.fromstring(self.lineEdit_Y.text(), sep = ', ')
+        return xText, yText
